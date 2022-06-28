@@ -1,0 +1,1 @@
+export const Tarefas_mock = ["Dormir 1", "Dormir 2", "Dormir 3"]
