@@ -12,6 +12,12 @@ function ListAll () {
         setNovaTarefa("");
     }
 
+    function deleteTarefa (index) {
+        let tempTarefa = [...tarefas];
+        tempTarefa.splice(index, 1);
+        setTarefas(tempTarefa);
+    }
+
     return (
         <>
         <div>
@@ -25,7 +31,7 @@ function ListAll () {
                 <fieldset>
                     <input type="checkbox" name="tarefa" value={itemTarefa} id={index} />
                     <label htmlFor="index">{itemTarefa}</label>
-                    <button>Remover</button>
+                    <button onClick={() => deleteTarefa()}>Remover</button>
                 </fieldset>
                 </>
             ))}
